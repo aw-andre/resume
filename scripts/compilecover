@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sed "s/\[Position\]/$1/g" cover-letter.tex | sed "s/\[Company\]/$2/g" | pdflatex &>/dev/null
+mv texput.pdf Andre_Aw_cover_letter.pdf
+rm texput.*
