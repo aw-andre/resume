@@ -3,6 +3,6 @@
 WITH_NEWLINES=$(sed 's/$/\\\\\\\\ \\\\vspace{10pt}\\/g' "$2")
 WITH_NEWLINES="${WITH_NEWLINES}
 Sincerely,"
-sed "/^Dear Sir\/Madam,$/,/^Sincerely,$/c$WITH_NEWLINES" cover-letter.tex | sed "s/\[Position\]/$1/g" | pdflatex
+sed "/^Dear Sir\/Madam,$/,/^Sincerely,$/c$WITH_NEWLINES" cover-letter.tex | sed "s/\[Position\]/$1/g" | pdflatex &>/dev/null
 mv texput.pdf Andre_Aw_cover_letter.pdf
 rm texput.*
