@@ -147,7 +147,7 @@
       {Five West Realty}{Manila, PH}
       \resumeItemListStart
         \resumeItem{Configured Layer 2 network appliances and local Linux servers}
-        \resumeItem{Automated repetitive workflows using Bash, Powershell, and AppScript}
+        \resumeItem{Automated repetitive workflows by scripting with Bash and Powershell}
         \resumeItem{Ensured standardization of drivers/binaries across office computers}
         \resumeItem{Troubleshot computer problems brought by staff}
       \resumeItemListEnd
@@ -168,7 +168,24 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Nix Devenv} $|$ \emph{Nix, Linux, Git, Bash/Zsh, Python, Lua}}{Nov 2024 -- Mar 2025}
+          {\textbf{Clausewitz Manifest} $|$ \emph{Rust, PostgreSQL, HTML, CSS, Javascript, Typescript, HTMX, Linux, Cloud, Nix, Git}}{Mar 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Created a RESTful API in Rust that allowed users to search for items in a PostgreSQL database produced by Clausewitz Parser}
+            \resumeItem{Used HTMX to allow recursive insertion of HTML/CSS "nodes" to show relationships of parents to children}
+            \resumeItem{Used Javascript and Typescript to handle fetching of child nodes}
+            \resumeItem{Ensured clean architecture by splitting basic functionality into microservices}
+            \resumeItem{Used Git and hosted the website on an AWS server using Nix to ensure reproducibility and ease of deployment}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Clausewitz Parser} $|$ \emph{Rust, Python, PostgreSQL, Paradox Script, Git}}{Feb 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a program that could create a PostgreSQL of all modifiers and events in Paradox games}
+            \resumeItem{Programmatically parsed Paradox Script, a domain-specific language developed by Paradox Interactive with the help of Python scripts}
+            \resumeItem{Read parse tree output into a database, keeping track of assignment pairs and scoping in the original Paradox Script using recursive parent-child relations}
+            \resumeItem{Increased PostgreSQL insert speed using strategies such as dropping indices using insertion, using unlogged tables, and storing batches of inserts into transactions}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Nix Devenv} $|$ \emph{Nix, Docker, Linux, Git, Bash/Zsh, Python, Lua}}{Nov 2024 -- Mar 2025}
           \resumeItemListStart
             \resumeItem{Developed isolated Linux/Unix development environments using Nix, a package manager stand-in for Docker containers}
             \resumeItem{Configured bootloaders, systemd services and interfacing with hardware via a uniform infrastructure-as-code interface}
@@ -176,22 +193,6 @@
             \resumeItem{Ensured reproducibility by storing version info in lockfiles tracked by Git}
             \resumeItem{Handled differences in required binaries per system architecture and OS by setting automatic recompilation of dependencies per system}
             \resumeItem{Used Bash/Zsh, Python, and Lua to configure common developer tools and automate repetitive development and versioning workflows}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Clausewitz Parser} $|$ \emph{Rust, PostgreSQL, Paradox Script, Git}}{Mar 2025 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a program that could create databases of all modifiers and events in Paradox games}
-            \resumeItem{Programmatically parsed Paradox Script, a domain-specific language developed by Paradox Interactive}
-            \resumeItem{Read parse tree output into a Postgres database, keeping track of assignment pairs and scoping in the original Paradox Script using recursive parent-child relations}
-            \resumeItem{Increased database insert speed using strategies such as dropping indices using insertion, using unlogged tables, and storing batches of inserts into transactions}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Clausewitz Manifest} $|$ \emph{Rust, PostgreSQL, HTML, CSS, Javascript, HTMX, Linux, Cloud, Nix, Git}}{Mar 2025 -- Present}
-          \resumeItemListStart
-            \resumeItem{Created a website that allowed users to search for items in a database produced by Clausewitz Parser}
-            \resumeItem{Used HTMX to allow recursive insertion of HTML "nodes" to show relationships of parents to children}
-            \resumeItem{Used Javascript to add interactivity to HTML nodes when clicked}
-            \resumeItem{Hosted the website on a remote server using Nix to ensure reproducibility and ease of deployment}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
