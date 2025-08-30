@@ -11,14 +11,12 @@ from typing import Any, Optional
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Set up logging to a file
-log_file = os.path.join(SCRIPT_DIR, "native_host.log")
+log_file = os.path.join(SCRIPT_DIR, "host.log")
 logging.basicConfig(
     filename=log_file,
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
-
-logging.info("Native host script started.")
 
 
 def get_message() -> Optional[dict[str, Any]]:
@@ -52,6 +50,8 @@ def send_message(message: dict[str, Any]) -> None:
 
 
 if __name__ == "__main__":
+    logging.info("Native host script started.")
+
     try:
         while True:
             logging.info("Waiting for message...")
