@@ -1,5 +1,5 @@
 {
-  "name": "com.google.chrome.example.echo",
+  "name": "com.highlighter.echo",
   "description": "A script to handle text from the highlighter extension.",
   "path": "/home/andreaw/files/projects/resume/native-host/host.py",
   "type": "stdio",
