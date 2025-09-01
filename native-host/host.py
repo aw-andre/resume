@@ -19,28 +19,36 @@ logging.basicConfig(
 )
 
 
-def get_message() -> Optional[dict[str, Any]]:
-    """Read a message from stdin using Chrome native messaging protocol.
+def receive() -> str:
+    """
+    Read a message from stdin using Chrome native messaging protocol.
 
     Returns:
-        Parsed JSON message as dictionary, or None if no message
+        text from received message
     """
     raw_length = sys.stdin.buffer.read(4)
     if len(raw_length) == 0:
         logging.info("stdin closed, exiting.")
         sys.exit(0)
+
     message_length = struct.unpack("@I", raw_length)[0]
     logging.info("Reading message of length: %d", message_length)
+
     message = sys.stdin.buffer.read(message_length).decode("utf-8")
     logging.info("Received message: %s", message)
-    return json.loads(message)
+
+    json_message = json.loads(message)
+    if json_message is None:
+        return ""
+    return json_message.get("text", "")
 
 
-def send_message(message: dict[str, Any]) -> None:
-    """Send a message to the browser extension using Chrome native messaging protocol.
+def send(message: dict[str, Any]) -> None:
+    """
+    Send a message to the browser extension using Chrome native messaging protocol.
 
     Args:
-        message: Dictionary to be sent as JSON message
+        message: dictionary to be sent as JSON
     """
     encoded_message = json.dumps(message).encode("utf-8")
     logging.info("Sending message: %s", encoded_message)
@@ -49,21 +57,18 @@ def send_message(message: dict[str, Any]) -> None:
     sys.stdout.buffer.flush()
 
 
+def get_message() -> str:
+    message = receive()
+    send({"status": "Received successfully!", "original_text": message})
+    return message
+
+
 if __name__ == "__main__":
     logging.info("Native host script started.")
 
     try:
         while True:
-            logging.info("Waiting for message...")
-            received_message = get_message()
-            if received_message is not None:
-                logging.info("Processing message.")
-                response = {
-                    "status": "Received successfully!",
-                    "original_text": received_message.get("text"),
-                }
-                send_message(response)
-                logging.info("Response sent.")
+            get_message()
     except Exception as e:
         logging.error("An unhandled exception occurred.")
         logging.error(traceback.format_exc())
