@@ -6,7 +6,7 @@ import json
 import struct
 import logging
 import traceback
-from typing import Any, Optional
+from typing import Any
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -58,6 +58,12 @@ def send(message: dict[str, Any]) -> None:
 
 
 def get_message() -> str:
+    """
+    Read a message via Chrome native messaging and respond to the browser.
+
+    Returns:
+        text from received message
+    """
     message = receive()
     send({"status": "Received successfully!", "original_text": message})
     return message
