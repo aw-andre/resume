@@ -1,17 +1,25 @@
 #!/usr/bin/env python3
 
-import os
 import sys
 import json
 import struct
 import logging
+import resumecompiler
 import traceback
-from typing import Any
+import pathlib
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+SCRIPT_PATH = pathlib.Path(__file__).absolute()
+SCRIPT_DIR = SCRIPT_PATH.parent
+
+BASE_DIR = SCRIPT_DIR.parent
+TEMPLATE_PATH = BASE_DIR.joinpath("resume_template.tex")
+CHOICES_PATH = BASE_DIR.joinpath("choices.yaml")
+DB_PATH = BASE_DIR.joinpath("resumes.db")
+
 
 # Set up logging to a file
-log_file = os.path.join(SCRIPT_DIR, "host.log")
+log_file = SCRIPT_DIR.joinpath("host.log")
 logging.basicConfig(
     filename=log_file,
     level=logging.INFO,
@@ -43,7 +51,7 @@ def receive() -> str:
     return json_message.get("text", "")
 
 
-def send(message: dict[str, Any]) -> None:
+def send(message: dict[str, str]) -> None:
     """
     Send a message to the browser extension using Chrome native messaging protocol.
 
@@ -74,7 +82,10 @@ if __name__ == "__main__":
 
     try:
         while True:
-            get_message()
+            description = get_message()
+            resumecompiler.compile_resume(
+                description, TEMPLATE_PATH, CHOICES_PATH, DB_PATH
+            )
     except Exception as e:
         logging.error("An unhandled exception occurred.")
         logging.error(traceback.format_exc())

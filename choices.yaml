@@ -1,0 +1,50 @@
+YSL Realty:
+  linux: Deployed Linux servers for storage and digitization of 200 GB+ of hardcopy records
+  unix: Deployed Linux servers for storage and digitization of 200 GB+ of hardcopy records
+  python: Used Python to develop automated server monitoring scripts that performed system health checks across five servers
+  bash: Automated server provisioning and maintenance using Bash scripts with cron scheduling and systemctl service management, reducing manual setup time by 80%
+  X: Troubleshot computer problems brought by staff
+
+Five West Realty:
+  powershell: Developed comprehensive Windows administration scripts using PowerShell with WMI queries, Active Directory cmdlets, and .NET framework integration for automated system management
+  bash: Developed extensive diagnostic and automation toolkit using Bash scripting with advanced parameter expansion, process substitution, and error handling for systematic troubleshooting workflows
+  linux: Provided comprehensive support for heterogeneous environments including Ubuntu, Red Hat, and macOS systems, managing SSH key distribution and shell customization across Unix platforms
+  unix: Provided comprehensive support for heterogeneous environments including Ubuntu, Red Hat, and macOS systems, managing SSH key distribution and shell customization across Unix platforms
+  X: Oversaw standardization of computer drivers across offices
+
+Resume Wordbuilder:
+  javascript: Used JavaScript to create a Chrome Native Messaging extension with Manifest V3 that sends job description text to a native Python script for resume tailoring
+  python: Used Python to process the received job description along with a provided LaTeX resume template and tailor the template for each job, reducing time needed per application by 80%
+  bash: Used Bash and PDFLatex to compile the tailored resume
+  sql: Stored tailored resumes in an SQLite database for retrieval if necessary
+  sqlite: Stored tailored resumes in an SQLite database for retrieval if necessary
+  postgres: Stored tailored resumes in an SQLite database for retrieval if necessary
+  postgresql: Stored tailored resumes in an SQLite database for retrieval if necessary
+
+Clausewitz Manifest:
+  "": Created a RESTful API in Rust that allowed users to search for items in a Postgres database of modifiers and events in Paradox games
+  rust: Engineered high-performance Rust API server using Actix-web with async/await patterns, Serde for serialization and Tokio for async runtime
+  html: Used HTMX and Javascript to allow recursive insertion of HTML/CSS ”nodes” to show relationships of parent items to child items
+  css: Used HTMX and Javascript to allow recursive insertion of HTML/CSS ”nodes” to show relationships of parent items to child items
+  html/css: Used HTMX and Javascript to allow recursive insertion of HTML/CSS ”nodes” to show relationships of parent items to child items
+  javascript: Used HTMX and Javascript to allow recursive insertion of HTML/CSS ”nodes” to show relationships of parent items to child items
+  sql: Designed SQL queries with recursive CTEs, window functions, and partitioning to ensure fetch times of <0.1s even for complex recursive queries over millions of records
+  sqlite: Designed SQL queries with recursive CTEs, window functions, and partitioning to ensure fetch times of <0.1s even for complex recursive queries over millions of records
+  postgres: Designed SQL queries with recursive CTEs, window functions, and partitioning to ensure fetch times of <0.1s even for complex recursive queries over millions of records
+  postgresql: Designed SQL queries with recursive CTEs, window functions, and partitioning to ensure fetch times of <0.1s even for complex recursive queries over millions of records
+  aws: Deployed on AWS EC2 with Nginx for rate limiting and constant availability
+
+Clausewitz Parser:
+  "": Developed a memory efficient program in Rust that could create a Postgres database of all modifiers and events in Paradox Interactive grand strategy simulations
+  "": Programmatically parsed Paradox Script, a domain-specific programming language developed by Paradox Interactive, and searched for modifiers and events
+  "": Read parse output into a Postgres database, keeping track of assignments and scopes using parent-child relationships
+  sql: Increased Postgres insert speed by 500% by using SQL strategies such as dropping indices before insertion, using unlogged tables, and grouping batches of inserts into transactions
+  sqlite: Increased Postgres insert speed by 500% by using SQL strategies such as dropping indices before insertion, using unlogged tables, and grouping batches of inserts into transactions
+  postgres: Increased Postgres insert speed by 500% by using SQL strategies such as dropping indices before insertion, using unlogged tables, and grouping batches of inserts into transactions
+  postgresql: Increased Postgres insert speed by 500% by using SQL strategies such as dropping indices before insertion, using unlogged tables, and grouping batches of inserts into transactions
+
+Nix Devenv:
+  "": Developed isolated Linux/Unix development environments using Nix, a package manager stand-in for Docker containers
+  "": Configured bootloaders, systemd services and interfacing with hardware via a uniform infrastructure-as-code interface that could be tracked in a Git repository
+  "": Standardized project dependencies by setting per-project PATHs to directories containing unique versions of each dependency and ensured reproducibility by storing version info in lockfiles tracked by Git
+  "": Embedded Bash/Zsh, Python, and Lua to configure common developer tools and automate repetitive development and versioning workflows 

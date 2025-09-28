@@ -8,7 +8,8 @@
     in {
       devShells."x86_64-linux".default = pkgs.mkShell {
         packages = with pkgs;
-          [ texliveFull ] ++ (with python313Packages; [ python ipython ipdb ]);
+          [ sqlite texliveFull ]
+          ++ (with python313Packages; [ python ipython ipdb pyyaml ]);
       };
     };
 }
