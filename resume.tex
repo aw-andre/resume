@@ -143,23 +143,25 @@
 %-------------------------------------------
 
     \resumeSubheading
-      {System Administrator}{Aug 2022 -- Aug 2023}
+      {System Administrator Intern}{Aug 2022 -- Aug 2023}
       {YSL Realty}{Manila, PH}
       \resumeItemListStart
-        \resumeItem{Deployed Linux servers for local centralized file sharing and backup}
-        \resumeItem{Set up secure file sharing via a GUI with SFTP and SSH}
-        \resumeItem{Digitized hardcopy records to local servers}
-        \resumeItem{Troubleshot computer problems brought by staff}
+        \resumeItem{Deployed and maintained local Linux servers for file storage and web hosting, reducing cloud hosting fees by 100\%}
+        \resumeItem{Set up a dashboard for secure file sharing with SFTP and SSH, reducing file sharing latency by 80\%}
+        \resumeItem{Eliminated accidental file overwrites using mtime-based versioning system}
+        \resumeItem{Used Python to automate mass digitization of paper documents into searchable PDFs, reducing document search times by 50\%}
+        \resumeItem{Created Bash scripts to automate routine maintenance tasks on servers}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Information Technology Support Specialist}{May 2021 -- Jun 2022}
+      {IT Support Intern}{May 2021 -- Jun 2022}
       {Five West Realty}{Manila, PH}
       \resumeItemListStart
-        \resumeItem{Configured Layer 2 network appliances and local Linux servers}
-        \resumeItem{Automated repetitive workflows by scripting with Bash and Powershell}
-        \resumeItem{Ensured standardization of drivers/binaries across office computers}
-        \resumeItem{Troubleshot computer problems brought by staff}
+        \resumeItem{Used Bash, Powershell, and Python scripts to automate common labor-intensive tasks, reducing time spent on routine tasks by 50\%}
+        \resumeItem{Ensured standardization of software across computers, reducing software versioning conflicts by 90\%}
+        \resumeItem{Configured Layer 2 network switches and local Linux servers}
+        \resumeItem{Configured office computers for reliability, reducing problems from network conflicts by 90\%}
+        \resumeItem{Troubleshot computer problems brought by staff, increasing office productivity by 10\%}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -168,31 +170,40 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Clausewitz Manifest} $|$ \emph{Javascript, Typescript, HTML, CSS, Rust, PostgreSQL, Cloud, Git}}{Mar 2025 -- Present}
+          {\textbf{Smart Air} $|$ \emph{Android app for parents to track children's medication}}{Oct 2025 -- Nov 2025}
           \resumeItemListStart
-            \resumeItem{Created a RESTful API in Rust that allowed users to search for items in a PostgreSQL database produced by Clausewitz Parser}
-            \resumeItem{Used HTMX to allow recursive insertion of HTML/CSS "nodes" to show relationships of parents to children}
-            \resumeItem{Used Javascript and Typescript to handle fetching of child nodes}
-            \resumeItem{Ensured clean architecture by splitting basic functionality into microservices}
-            \resumeItem{Used Git and hosted the website on an AWS server using Nix to ensure reproducibility and ease of deployment}
+            \resumeItem{Built and led a group of 5 developers in implementing a fullstack Android app over a 5-week period}
+            \resumeItem{Designed the frontend of the app using Kotlin for user input and adjustable settings}
+            \resumeItem{Implemented a RESTful API in Java with Firebase as the data store}
+            \resumeItem{Guided 4 developers with advanced Git workflows, reducing time spent on deployment by 50\%}
+            \resumeItem{Used Agile methodologies such as Scrum and Kanban to ensure 5\% early delivery of features}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Clausewitz Parser} $|$ \emph{Python, Rust, PostgreSQL, Paradox Script, Git}}{Feb 2025 -- Present}
+          {\textbf{Clausewitz Manifest} $|$ \emph{Web app for searching info in complex strategy games}}{Mar 2025 -- Jul 2025}
           \resumeItemListStart
-            \resumeItem{Developed a program that could create a PostgreSQL of all modifiers and events in Paradox games}
-            \resumeItem{Programmatically parsed Paradox Script, a domain-specific language developed by Paradox Interactive with the help of Python scripts}
-            \resumeItem{Read parse tree output into a database, keeping track of assignment pairs and scoping in the original Paradox Script using recursive parent-child relations}
-            \resumeItem{Increased PostgreSQL insert speed using strategies such as dropping indices using insertion, using unlogged tables, and storing batches of inserts into transactions}
+            \resumeItem{Built a fullstack web app that displayed over 5 million datapoints from Paradox Interactive games}
+            \resumeItem{Designed a frontend using HTML, CSS, and Javascript that used lazy loading to display data without reloading pages}
+            \resumeItem{Programmed a production-grade backend in Rust that served API endpoints in sub-50ms time}
+            \resumeItem{Sourced data from a Postgres database using the SQLX Rust library}
+            \resumeItem{Hosted on AWS using EC2 instances with Docker containers for easy deployment and scalability}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Nix Devenv} $|$ \emph{Nix, Docker, Linux, Git, Bash/Zsh, Python, Lua}}{Nov 2024 -- Mar 2025}
+          {\textbf{Clausewitz Parser} $|$ \emph{Parser and database generator for domain-specific language}}{Feb 2025 -- Jun 2025}
           \resumeItemListStart
-            \resumeItem{Developed isolated Linux/Unix development environments using Nix, a package manager stand-in for Docker containers}
-            \resumeItem{Configured bootloaders, systemd services and interfacing with hardware via a uniform infrastructure-as-code interface}
-            \resumeItem{Standardized project dependencies by setting per-project PATHs to directories containing unique versions of each dependency}
+            \resumeItem{Developed a production-grade parser in Rust for a domain-specific language used in Paradox Interactive games}
+            \resumeItem{Achieved parsing speeds of 800MB/s per core and multithreaded computation using tokio}
+            \resumeItem{Read parse output into a Postgres database using the SQLX Rust library}
+            \resumeItem{Increased insert speed using SQL strategies such as dropping indices during insertion, using unlogged tables, and grouping batches of inserts into transactions, achieving 200MB/s insert speeds on 50GB text datasets}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Nix Devenv} $|$ \emph{Highly configured Linux systems using Nix}}{Nov 2024 -- Mar 2025}
+          \resumeItemListStart
+            \resumeItem{Managed configuration of pseudo-containerized Linux/Unix environments}
+            \resumeItem{Used a uniform infrastructure-as-code interface to configure bootloaders, systemd services, and program configuration}
+            \resumeItem{Developed Bash and Python scripts for wrapping unpackaged binaries and automating workflows}
+            \resumeItem{Used CI/CD to automatically build and deploy system configurations to multiple machines}
+            \resumeItem{Reduced unrecoverable system breakages by 99\% through atomic upgrades and both bootloader and Git-based rollbacks}
             \resumeItem{Ensured reproducibility by storing version info in lockfiles tracked by Git}
-            \resumeItem{Handled differences in required binaries per system architecture and OS by setting automatic recompilation of dependencies per system}
-            \resumeItem{Used Bash/Zsh, Python, and Lua to configure common developer tools and automate repetitive development and versioning workflows}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -200,13 +211,13 @@
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: C/C++, Rust, Python, HTML, CSS, Javascript, Lua, Bash, Zsh, Dash, Powershell, Nix} \\
-     \textbf{Developer Tools}{: Git, Linux, Bash, Zsh, Dash, Powershell, Nix, SSH, Vim} \\
-    }}
- \end{itemize}
+% \section{Technical Skills}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Languages}{: C/C++, Rust, Python, HTML, CSS, Javascript, Lua, Bash, Zsh, Dash, Powershell, Nix} \\
+%      \textbf{Developer Tools}{: Git, Linux, Bash, Zsh, Dash, Powershell, Nix, SSH, Vim} \\
+%     }}
+%  \end{itemize}
 
 
 %-------------------------------------------
